@@ -1,3 +1,113 @@
-body{
-    background:blue;   
+body, ul{/* убераю отступы от всех блоков*/
+ margin: 0;
+ padding: 0;
+}
+*{
+    box-sizing: border-box/* никакие отступы не влияют на ширину блока *-это для всех елементов на странице*/
+}
+a{
+    text-decoration: none; /* подчёркивание ссылок убираем*/
+    color: white;
+}
+li{
+    list-style:none/* точки в списке убираем*/
+}
+.center{
+    margin:auto;
+    max-width:1000px;/*не больше 1000 пикселей*/
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+#header-top{
+    justify-content: space-between;
+    padding: 20px 0px;
+    align-items: center;
+    
+}
+#search{
+    position: relative;/* потестить дома*/
+    max-width: 435px;/* не будет больше 435 пикселей*/
+    width:100%;
+    height:30px;/* высота нашего блока содержазий инпут и лупу */
+    border:1px solid #e1e1e1;
+}
+#search img{
+    position:  absolute;/* размещается относительно родительского елемента*/
+    top:2px;
+    right:5px;
+
+}
+#search input{
+    border: none;
+    width:100%;
+    height:100%;/* рвстяигваем инпут на всю ширину сёрча*/
+    padding: 5px 35px 5px 10px;/* отступы текста в поисковом поле*/
+
+}
+
+#cart{
+    display: flex;
+    align-items: center;
+}
+#header-menu {
+    background: #4ccfc1;
+    padding:10px 15px;  
+}
+
+#header-menu ul{
+    justify-content: space-between;
+}
+
+
+#header-menu ul li a{
+    border-right: 1px solid #fff;
+    padding:0 20px;
+}
+#header-menu ul li:first-child a{/*выбрали первый елемент списка и применяем стиль к "а"*/
+    padding-left: 0;  /* убрали отступ первого елемента*/
+}
+#header-menu ul li:last-child a{/*выбрали последний елемент списка и применяем стиль к "а"*/
+    padding-right: 0;
+    border: none; /* убрали последнюю полоску*/
+}
+
+
+
+
+@media(max-width:1025px){
+    #header-top{
+        
+        padding: 15px;/* отступы на экране побольше*/
+    }
+}
+@media(max-width:940px){
+    #header-menu ul li a{
+        border:none;/**/
+
+    }
+    #header-menu ul{
+        justify-content: center;
+    }
+}
+@media(max-width: 670px){
+    #header-top{
+        flex-direction: column;/* центровка елементов по вертикали(горизонталь>вертикаль)*/
+        padding: 15px;
+    }
+    #search{
+        margin: 15px 0;/* отуступы елементов на маленьком экране*/  
+    }
+
+}
+@media(max-width:530px){
+    #header-menu ul li a, #header-menu ul li{
+        width: 100%;
+        text-align: center;
+      
+    }
+    #header-menu ul li a{
+        padding:5px 15px !important;
+        display:block;/*так как у строчных елементо нет ерхнего отступа*/
+    }
 }
