@@ -171,8 +171,17 @@ i, h3 {
 .product img{
     max-width: 100%;
 }
+#footer-top-bg{
+    background: #3cc3b5;
+}
+#footer-top{
+    justify-content: space-between;
 
-
+}
+#footer-bottom{
+    background: #2da89b;
+    text-align: center
+}
 
 
 
