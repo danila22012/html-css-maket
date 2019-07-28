@@ -21,11 +21,14 @@ a{
 li{
     list-style:none/* точки в списке убираем*/
 }
+i, h3 {
+    color:#a1a1a1;
+}
 .center{
     margin:auto;/*Выравнивание по центру относительно родителя */
     max-width:1000px;/*не больше 1000 пикселей*/
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/*Если не влазят в блок начинают сносится вниз */
   
 }
 #header-top{
@@ -65,6 +68,7 @@ li{
     position: relative;
     margin-left:15px;/* можно перемещать при этом место будет зарезервивовано*/
     top:5px;
+
 }
 #header-menu {
     background: #4ccfc1;
@@ -125,6 +129,56 @@ li{
    
 
 }
+.product{
+    width:33.33%;
+}
+#products{
+    padding:23px 0;
+}
+.product .wrap{
+    border:1px solid #ccc;
+    border-bottom: 5px solid #3cc395;
+    margin:23px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding:25px 0 30px 0;
+    font-size:28px;         
+    
+}
+.product i{
+    
+    font-style: normal;/*убрать курсив*/
+}
+.product button{
+    background:#3cc395;
+    padding: 5px 10px;
+    color: white;
+    border:none;
+    border-radius: 3px;
+    padding: 12px 10px 8px 10px;
+    font-size: 20px;
+    cursor:pointer;
+    transition:0.3s;   
+    margin-left:15px;       
+}
+.product button:hover{
+    background:#469070;
+}
+.product h3{
+    margin:10px 0;
+}
+.product img{
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -179,9 +233,17 @@ li{
         padding: 15px;
     }
     #search{
-        margin: 15px 0;/* отуступы елементов на маленьком экране*/  
+        margin: 17px 0;/* отуступы елементов на маленьком экране*/  
     }
-
+    .product{
+        width: 50%;
+    }
+    .product .wrap{
+        margin:12px;
+    }
+    #products{
+        padding:10px;
+    }
 }
 
 
@@ -194,6 +256,7 @@ li{
     }
     #header-menu ul li a{
         padding:5px 15px !important;
-        display:block;/*так как у строчных елементо нет ерхнего отступа*/
+        display:block;/*так как у строчных елементо нет верхнего отступа*/
     }
+
 }
