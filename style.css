@@ -176,13 +176,30 @@ i, h3 {
 }
 #footer-top{
     justify-content: space-between;
+    padding:35px 15px 20px 15px;
 
+
+}
+
+#footer-top h2{
+    margin-top:0;
+    color: #fff;
+    
+
+}
+#footer-top a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+    display:block;
+    margin-bottom: 15px ;
+    
 }
 #footer-bottom{
     background: #2da89b;
-    text-align: center
+    text-align: center;
+    padding:15px 0;
+    color:#fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 
 
 
@@ -245,7 +262,7 @@ i, h3 {
         margin: 17px 0;/* отуступы елементов на маленьком экране*/  
     }
     .product{
-        width: 50%;
+        width: 50%;/* два елемента на странице*/
     }
     .product .wrap{
         margin:12px;
@@ -267,5 +284,14 @@ i, h3 {
         padding:5px 15px !important;
         display:block;/*так как у строчных елементо нет верхнего отступа*/
     }
+    #footer-top .nav{
+        margin: 15px;
 
+    }
+    #footer-top{
+        justify-content: center
+    }
+    .product{
+        width: 100%;/* один елемент на странице*/
+    }
 }
