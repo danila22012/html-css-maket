@@ -5,6 +5,10 @@
     font-style: normal;
 }
 
+
+
+/* COMMON */
+
 body, ul{/* убераю отступы от всех блоков*/
  margin: 0;
  padding: 0;
@@ -14,6 +18,7 @@ body, ul{/* убераю отступы от всех блоков*/
     box-sizing: border-box;/* никакие отступы не влияют на ширину блока *-это для всех елементов на странице*/
     font-family: 'bebasneue';
 }
+
 a{
     text-decoration: none; /* подчёркивание ссылок убираем*/
     color: white;
@@ -31,6 +36,12 @@ i, h3 {
     flex-wrap: wrap;/*Если не влазят в блок начинают сносится вниз */
   
 }
+
+
+
+
+/* HEADER */
+
 #header-top{
     justify-content: space-between;
     padding: 20px 0px;
@@ -78,8 +89,6 @@ i, h3 {
 #header-menu ul{
     justify-content: space-between;/*растянуть по ширине екрана с равными отступами между елементами*/
 }
-
-
 #header-menu ul li a{
     border-right: 1px solid #fff;
     padding:0 20px;
@@ -93,27 +102,31 @@ i, h3 {
     border: none; /* убрали последнюю полоску*/
 }
 
-#slider-bg{
+
+
+/* SLIDER-TOP */
+
+#slider-top-bg{
     background: #38bfb1;
 }
-#slider-text{
+#slider-top-text{
     max-width:420px;/* не больше 420 пикселей, стали в ряд с картинкой*/
 }
-#slider{
+#slider-top{
     justify-content: space-around;
     padding: 55px 0;
     color:white;
 }
-#slider-text h2{
+#slider-top-text h2{
     font-size: 70px;
     margin: 15px 0 0 0;
     
 }
-#slider-text p{
+#slider-top-text p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin:5px 0 25px 0;
 }
-#slider-text button{/* стили для кнопки*/
+#slider-top-text button{/* стили для кнопки*/
     background: none;/* убераем фон*/
     padding: 12px 30px 8px 30px;
     border: 2px solid white;
@@ -123,12 +136,79 @@ i, h3 {
     cursor:pointer;
     transition: 0.3s;/* задержка подсветки 0.5с*/
 }
-#slider-text button:hover{
+#slider-top-text button:hover{
     background:#fff;
     color: #38bfb1;
-   
-
 }
+
+
+
+/* SLIDER-BOTTOM */
+
+#slider-bot-bg{
+    background: #fff;
+   display: flex;
+  
+}
+
+#slider-bot{
+    max-width: 1200px;
+    align-items: center;
+}
+
+#btn-left, #btn-right{
+    height: 86px;
+    margin:0 10px
+}
+.slider-bot-product{
+    padding: 20px 0;
+    display: flex;
+    width: 30%;
+    border-right: 1px solid #ccc;
+    min-width: 340px;
+    min-height: 190px;
+}
+.slider-bot-product:last-of-type {/* убрал полоску с третьего дива*/
+   border:none;
+}
+
+.slider-bot-product div i{
+    display: block;
+    font-size: 24px;
+    font-style: normal;
+    margin:24px 0 15px 0;
+    width: 76px;
+}
+.slider-bot-product div button{
+    background: #30be91;
+    padding:8px 15px 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #52b595;
+    color:#ecfefd;
+}
+
+
+
+
+/* FEATURE */
+
+#feature-bg{
+    background: #38bfb1;
+}
+#feature{
+    color: #fff;
+    font-size:25px;
+    padding: 22px 0 20px 0;
+}
+
+
+
+
+
+
+
+/* PRODUCTS */
+
 .product{
     width:33.33%;
 }
