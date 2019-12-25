@@ -158,7 +158,14 @@ i, h3 {
 
 #btn-left, #btn-right{
     height: 86px;
-    margin:0 10px
+    margin:0 10px;
+    cursor:pointer;
+}
+.slider-bot-product img{
+    max-height: 150px;
+    margin-right: 10px;
+  
+    
 }
 .slider-bot-product{
     padding: 20px 0;
@@ -167,6 +174,7 @@ i, h3 {
     border-right: 1px solid #ccc;
     min-width: 340px;
     min-height: 190px;
+    justify-content: center;
 }
 .slider-bot-product:last-of-type {/* убрал полоску с третьего дива*/
    border:none;
@@ -185,9 +193,12 @@ i, h3 {
     border-radius: 5px;
     border: 1px solid #52b595;
     color:#ecfefd;
+    transition: 0.5s;
+    cursor: pointer;
 }
-
-
+.slider-bot-product div button:hover{
+    background:#469070;
+}
 
 
 /* FEATURE */
@@ -199,6 +210,7 @@ i, h3 {
     color: #fff;
     font-size:25px;
     padding: 22px 0 20px 0;
+    justify-content: center;
 }
 
 
@@ -311,7 +323,15 @@ i, h3 {
 
 
 
-
+@media(max-width:1150px){
+    .slider-bot-product:last-of-type{
+        display: none;
+        
+    }
+    .slider-bot-product:not(:first-of-type){
+        border: none;
+    }
+}
 
 @media(max-width:1025px){
     #header-top{
@@ -319,14 +339,26 @@ i, h3 {
         padding: 15px;/* отступы на экране побольше*/
     }
 }
-@media(max-width:940px){
+@media(max-width:1015px){
     #header-menu ul li a{
         border:none;/**/
+        padding: 0 15px;
+        margin-top:5px;
+        display: block;
 
     }
     #header-menu ul{
         justify-content: center;
     }
+}
+@media(max-width:810px){
+    .slider-bot-product:not(:first-of-type){
+        display: none;
+    }
+    .slider-bot-product{
+        border: none;
+    }
+
 }
 @media(max-width:700px){
     #slider{
@@ -334,12 +366,21 @@ i, h3 {
         justify-content: center;
         padding:15px 0 15px 0;
     }
+    #logo img{
+        
+        margin-top: 10px;
+        min-height: 40px;
+    }
     #header-top{
-        flex-direction: column;/* центровка елементов по вертикали(горизонталь>вертикаль)*/
+       flex-wrap: nowrap;
         padding: 15px;
     }
     #search{
-        margin: 17px 0;/* отуступы елементов на маленьком экране*/  
+        margin: 17px 10px;/* отуступы елементов на маленьком экране*/  
+        
+    }
+    #cart i{
+        display: none;
     }
     .product{
         width: 50%;/* два елемента на странице*/
@@ -349,6 +390,20 @@ i, h3 {
     }
     #products{
         padding:10px;
+    }
+    .nav:last-of-type {
+        display: none;
+
+    }
+    .nav:first-of-type {
+        display: none;
+
+    }
+    #footer-top{
+        justify-content: space-around;
+    }
+    #feature{
+        padding:12px 0 10px 0;
     }
 }
 
