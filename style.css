@@ -15,7 +15,7 @@ body, ul{/* убераю отступы от всех блоков*/
 
 }
 *{
-    box-sizing: border-box;/* никакие отступы не влияют на ширину блока *-это для всех елементов на странице*/
+   
     font-family: 'bebasneue';
 }
 
@@ -72,6 +72,7 @@ i, h3 {
 #cart {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 #cart i{
     font-style:normal;
@@ -114,7 +115,7 @@ i, h3 {
 }
 #slider-top{
     justify-content: space-around;
-    padding: 55px 0;
+    padding: 55px 0 0 0;
     color:white;
 }
 #slider-top-text h2{
@@ -140,6 +141,19 @@ i, h3 {
     background:#fff;
     color: #38bfb1;
 }
+#btnContainer{
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnCircle{
+    background: #fff;
+    margin: 10px;
+    border: 8px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
 
 
 
@@ -148,37 +162,48 @@ i, h3 {
 #slider-bot-bg{
     background: #fff;
    display: flex;
+   align-items: center;
+   justify-content: center;
   
 }
-
-#slider-bot{
+#slider-bot-container{
+   
     max-width: 1200px;
+    display: flex;
     align-items: center;
+    overflow: hidden;
+    
+}
+#slider-bot{
+    
+    align-items: center;
+    display: flex;
+    
 }
 
 #btn-left, #btn-right{
     height: 86px;
     margin:0 10px;
     cursor:pointer;
+    z-index: 1000;
 }
 .slider-bot-product img{
     max-height: 150px;
     margin-right: 10px;
+    
   
     
 }
 .slider-bot-product{
-    padding: 20px 0;
+    padding-top: 20px;
     display: flex;
     width: 30%;
     border-right: 1px solid #ccc;
-    min-width: 340px;
-    min-height: 190px;
+    min-width: 400px;
+    min-height: 160px;
     justify-content: center;
 }
-.slider-bot-product:last-of-type {/* убрал полоску с третьего дива*/
-   border:none;
-}
+
 
 .slider-bot-product div i{
     display: block;
@@ -210,7 +235,7 @@ i, h3 {
     color: #fff;
     font-size:25px;
     padding: 22px 0 20px 0;
-    justify-content: center;
+    
 }
 
 
